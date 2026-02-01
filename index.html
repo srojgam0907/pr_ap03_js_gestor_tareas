@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de tareas</title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <main class="contenedor">
+        <h1>GESTOR DE TAREAS</h1>
+
+        <section class="entrada"> <!-- Entrada de tareas -->
+            <input type="text" id="tareaInput" placeholder="Introduce aqui tu tarea">
+            <button id="btnAgregar">Añadir tarea</button>
+        </section>
+
+        <section class="lista"> <!-- Mostrar lista de tareas -->
+            <ul id="listaTareas">
+
+            </ul>
+        </section>
+    </main>
+
 </body>
 </html>
