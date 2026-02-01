@@ -33,14 +33,24 @@ function crearTarea(text) {
     
     elemento.textContent= text;
     tarea.appendChild(elemento);
+
+    elemento.addEventListener("click", () => {
+        completado(elemento);
+    });
+
+    elemento.addEventListener("dblclick", () => {
+        eliminarTarea(elemento);
+    })
+
+    input.value= "";
 }
 
 //Marca la tarea como completada
-function completado() {
+function completado(elemento) {
     elemento.classList.toggle("completada");
 }
 
 //Se encarga de eliminar tareas de la lista
-function eliminarTarea() {
+function eliminarTarea(elemento) {
     elemento.remove();
 }
