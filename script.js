@@ -30,17 +30,17 @@ function recibirTarea() {
 //Crea el elemento visual de una tarea
 function crearTarea(text) {
     const elemento= document.createElement("li");
-
+    
     elemento.textContent= text;
     tarea.appendChild(elemento);
 }
 
 //Marca la tarea como completada
 function completado() {
-
+    elemento.classList.toggle("completada");
 }
 
 //Se encarga de eliminar tareas de la lista
-function eliminarTareas() {
-
+function eliminarTarea() {
+    elemento.remove();
 }
