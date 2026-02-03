@@ -2,7 +2,6 @@ const boton= document.querySelector("#btnAgregar");
 const input= document.querySelector("#tareaInput");
 const tarea= document.querySelector("#listaTareas");
 
-
 boton.addEventListener("click", (event) => {
     
     let texto= recibirTarea();
@@ -13,8 +12,11 @@ boton.addEventListener("click", (event) => {
     
 });
 
-//Recibe el texto que se introduce en el input y valida si está o no vacío.
-//Si es correcto la devuelve.
+/**
+ * Recibe el texto que se introduce en el input y valida si está o no vacío.
+ * Si es correcto lo devuelve.
+ * @returns {String}
+ */
 function recibirTarea() {
     let texto;
 
@@ -27,7 +29,10 @@ function recibirTarea() {
     return texto;
 }
 
-//Crea el elemento visual de una tarea
+/**
+ * Crea el elemento visual de una tarea
+ * @param {text} text 
+ */
 function crearTarea(text) {
     const elemento= document.createElement("li");
     
@@ -45,12 +50,18 @@ function crearTarea(text) {
     input.value= "";
 }
 
-//Marca la tarea como completada
+/**
+ * Marca la tarea como completada
+ * @param {elemento} elemento 
+ */
 function completado(elemento) {
     elemento.classList.toggle("completada");
 }
 
-//Se encarga de eliminar tareas de la lista
+/**
+ * Se encarga de eliminar tareas de la lista
+ * @param {elemento} elemento 
+ */
 function eliminarTarea(elemento) {
     elemento.remove();
 }
